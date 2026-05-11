@@ -33,7 +33,7 @@ const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             className="text-2xl font-bold text-gradient"
           >
-            TVS.
+            Vaibhav.
           </motion.div>
           
           <div className="hidden md:flex space-x-8 items-center">
