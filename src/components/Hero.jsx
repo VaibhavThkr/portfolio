@@ -95,8 +95,8 @@ const Hero = () => {
         <a href={resumeData.personal.linkedin} target="_blank" rel="noreferrer" className="text-slate-400 hover:text-purple-400 transition-colors hover:scale-110 transform">
           <FaLinkedin size={22} />
         </a>
-        <a href="https://github.com" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-purple-400 transition-colors hover:scale-110 transform">
-          <FaGithub size={22} />
+        <a href="/resume.pdf" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-purple-400 transition-colors hover:scale-110 transform">
+          <FileText size={22} />
         </a>
         <a href={`mailto:${resumeData.personal.email}`} className="text-slate-400 hover:text-purple-400 transition-colors hover:scale-110 transform">
           <Mail size={22} />
