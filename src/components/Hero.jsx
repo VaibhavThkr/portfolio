@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { resumeData } from '../data/resumeData';
-import { Linkedin, Github, Mail, FileText } from 'lucide-react';
+import { Mail, FileText } from 'lucide-react';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import heroImg from '../assets/Transparent PNG.png';
 
 const Hero = () => {
@@ -93,10 +94,10 @@ const Hero = () => {
         className="hidden lg:flex absolute left-12 top-1/2 -translate-y-1/2 flex-col gap-8 z-20"
       >
         <a href={resumeData.personal.linkedin} target="_blank" rel="noreferrer" className="text-slate-400 hover:text-purple-400 transition-colors hover:scale-110 transform">
-          <Linkedin size={22} />
+          <FaLinkedin size={22} />
         </a>
         <a href="https://github.com" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-purple-400 transition-colors hover:scale-110 transform">
-          <Github size={22} />
+          <FaGithub size={22} />
         </a>
         <a href={`mailto:${resumeData.personal.email}`} className="text-slate-400 hover:text-purple-400 transition-colors hover:scale-110 transform">
           <Mail size={22} />
