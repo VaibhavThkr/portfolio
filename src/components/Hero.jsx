@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { resumeData } from '../data/resumeData';
 import { ChevronDown, Download, ArrowRight } from 'lucide-react';
-import heroImg from '../assets/hero.png';
+import heroImg from '../assets/Transparent PNG.png';
 
 const Hero = () => {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
