@@ -51,6 +51,7 @@ const Hero = () => {
                 src={heroImg} 
                 alt="Thakur Vaibhav Singh" 
                 className="w-full h-auto drop-shadow-2xl relative z-10"
+                style={{ WebkitMaskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)', maskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)' }}
               />
             </div>
           </motion.div>
