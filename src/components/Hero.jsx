@@ -98,20 +98,12 @@ const Hero = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="relative lg:ml-auto flex justify-center lg:justify-end mt-12 lg:mt-0"
           >
-            <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-[450px] lg:h-[450px]">
-              {/* Decorative rings */}
-              <div className="absolute inset-0 rounded-full border-2 border-primary/20 animate-[spin_10s_linear_infinite]"></div>
-              <div className="absolute inset-4 rounded-full border-2 border-secondary/20 border-dashed animate-[spin_15s_linear_infinite_reverse]"></div>
-              
-              {/* Creative Image Container */}
-              <div className="absolute inset-6 rounded-full overflow-hidden bg-gradient-to-tr from-slate-900 to-slate-800 shadow-[0_0_40px_rgba(14,165,233,0.3)]">
-                <img 
-                  src={heroImg} 
-                  alt="Thakur Vaibhav Singh" 
-                  className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-
+            <div className="relative w-72 sm:w-80 lg:w-[450px]">
+              <img 
+                src={heroImg} 
+                alt="Thakur Vaibhav Singh" 
+                className="w-full h-auto drop-shadow-[0_20px_50px_rgba(14,165,233,0.2)] hover:scale-105 transition-transform duration-700 z-10 relative"
+              />
             </div>
           </motion.div>
 
