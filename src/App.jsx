@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import GateRank from './components/GateRank';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
@@ -19,6 +20,7 @@ function App() {
       
       <main>
         <Hero />
+        <GateRank />
         <About />
         <Skills />
         <Projects />

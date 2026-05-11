@@ -36,7 +36,7 @@ const Research = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Research & Publications</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Poster and Paper presentations</h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>
         </motion.div>
 

@@ -128,13 +128,21 @@ export const resumeData = {
       organization: "Meditech 2k25",
       period: "Jan 2025 - Mar 2025",
       details: ["Was a Design Volunteer and Operations member."]
+    },
+    {
+      role: "Volunteer",
+      organization: "Section Student Congress 2025, IEEE Hyderabad Section",
+      period: "Oct 2024",
+      details: ["Volunteered in logistics of the event."]
+    },
+    {
+      role: "Design Volunteer",
+      organization: "Meditech 2k24",
+      period: "Jan 2024 - Mar 2024",
+      details: ["Volunteered for design for various posters, invitations, Brochure, Certificates."]
     }
   ],
   achievements: [
-    {
-      title: "GATE 2026 AIR 154",
-      description: "Achieved AIR 154 in Biomedical Engineering paper."
-    },
     {
       title: "1st Prize - Poster Presentation (NSI-45)",
       description: "Presented 'Mitigating SANS: A Novel Wearable Device for Real-Time Non-Invasive ICP Monitoring in Spaceflight'."
