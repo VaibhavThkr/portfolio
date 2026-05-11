@@ -1,11 +1,11 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
 @theme {
-  --color-primary: #0ea5e9;
-  --color-secondary: #14b8a6;
-  --color-dark: #0f172a;
-  --color-darker: #020617;
+  --color-primary: #a855f7;
+  --color-secondary: #d8b4fe;
+  --color-dark: #050505;
+  --color-darker: #000000;
   
   --animate-blob: blob 7s infinite;
   --animate-fade-in-up: fadeInUp 0.8s ease-out forwards;
@@ -30,7 +30,7 @@ html {
 body {
   background-color: var(--color-dark);
   color: #e2e8f0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Outfit', sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -39,12 +39,12 @@ body {
   .glass {
     background-color: rgba(15, 23, 42, 0.4);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(51, 65, 85, 0.5);
+    border: 1px solid rgba(168, 85, 247, 0.2);
   }
   .glass-card {
     background-color: rgba(30, 41, 59, 0.4);
     backdrop-filter: blur(16px);
-    border: 1px solid rgba(51, 65, 85, 0.5);
+    border: 1px solid rgba(168, 85, 247, 0.2);
     transition: all 0.3s ease;
   }
   .glass-card:hover {

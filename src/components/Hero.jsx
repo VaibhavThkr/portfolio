@@ -34,8 +34,8 @@ const Hero = () => {
             <p className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600 font-semibold text-xl md:text-2xl mb-2 tracking-wider">
               Hello, I'm
             </p>
-            <h1 className="text-5xl sm:text-6xl lg:text-[5rem] font-extrabold text-white tracking-tight leading-none mb-4">
-              Vaibhav <br className="hidden lg:block" /> Singh
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white tracking-tight leading-none mb-4">
+              Thakur <br className="hidden lg:block" /> Vaibhav <br className="hidden lg:block" /> Singh
             </h1>
           </motion.div>
 
@@ -46,14 +46,12 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="flex-shrink-0 flex justify-center order-1 lg:order-2 relative mx-auto w-72 sm:w-80 lg:w-[450px]"
           >
-            <div className="relative z-10">
+            <div className="relative z-10 w-full overflow-hidden">
               <img 
                 src={heroImg} 
-                alt="Vaibhav Singh" 
-                className="w-full h-auto drop-shadow-2xl relative z-10 scale-105"
+                alt="Thakur Vaibhav Singh" 
+                className="w-full h-auto drop-shadow-2xl relative z-10"
               />
-              {/* Bottom fade mask to blend image into the black background smoothly */}
-              <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-transparent z-20 pointer-events-none"></div>
             </div>
           </motion.div>
 

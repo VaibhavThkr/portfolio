@@ -7,13 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#0ea5e9", // Sky blue for healthcare tech vibe
-        secondary: "#14b8a6", // Teal
-        dark: "#0f172a", // Deep slate
-        darker: "#020617",
+        primary: "#a855f7", // Purple 500
+        secondary: "#d8b4fe", // Purple 300
+        dark: "#050505", // Pitch black
+        darker: "#000000",
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Outfit', 'sans-serif'],
       },
       animation: {
         'blob': 'blob 7s infinite',
