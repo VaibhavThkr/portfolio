@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { resumeData } from '../data/resumeData';
-import { ChevronDown, Download, ArrowRight } from 'lucide-react';
+import { Linkedin, Github, Mail, FileText } from 'lucide-react';
 import heroImg from '../assets/Transparent PNG.png';
 
 const Hero = () => {
@@ -16,42 +16,57 @@ const Hero = () => {
   }, [roles.length]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-slate-950">
-      {/* Background elements */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full mix-blend-screen filter blur-[100px] animate-blob"></div>
-      <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-secondary/10 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-2000"></div>
-      <div className="absolute bottom-1/4 left-1/2 w-96 h-96 bg-purple-500/10 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-4000"></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#050505] pt-20 pb-12">
+      {/* Deep Purple Glow behind the person */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-purple-600/30 rounded-full filter blur-[120px] pointer-events-none z-0"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 relative">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-4 h-full">
           
-          {/* Left Column - Content */}
-          <div className="text-left space-y-6 lg:pr-8">
-            <motion.div 
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-block px-4 py-2 rounded-full glass-card border border-primary/30"
-            >
-              <p className="text-primary font-medium tracking-wider text-sm sm:text-base uppercase">
-                Welcome to my portfolio
-              </p>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-            >
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white tracking-tight leading-tight mb-2">
-                Hi, I'm <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-                  Vaibhav Singh
-                </span>
-              </h1>
-            </motion.div>
+          {/* Left Column - Name */}
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex-1 text-center lg:text-left order-2 lg:order-1 flex flex-col justify-center lg:pr-12"
+          >
+            <p className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600 font-semibold text-xl md:text-2xl mb-2 tracking-wider">
+              Hello, I'm
+            </p>
+            <h1 className="text-5xl sm:text-6xl lg:text-[5rem] font-extrabold text-white tracking-tight leading-none mb-4">
+              Vaibhav <br className="hidden lg:block" /> Singh
+            </h1>
+          </motion.div>
 
-            <div className="h-16 flex items-center justify-start">
+          {/* Center Column - Image */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="flex-shrink-0 flex justify-center order-1 lg:order-2 relative mx-auto w-72 sm:w-80 lg:w-[450px]"
+          >
+            <div className="relative z-10">
+              <img 
+                src={heroImg} 
+                alt="Vaibhav Singh" 
+                className="w-full h-auto drop-shadow-2xl relative z-10 scale-105"
+              />
+              {/* Bottom fade mask to blend image into the black background smoothly */}
+              <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-transparent z-20 pointer-events-none"></div>
+            </div>
+          </motion.div>
+
+          {/* Right Column - Role */}
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex-1 text-center lg:text-right order-3 lg:order-3 flex flex-col justify-center lg:pl-12"
+          >
+            <p className="text-transparent bg-clip-text bg-gradient-to-l from-purple-400 to-purple-600 font-semibold text-xl md:text-2xl mb-2 tracking-wider">
+              Passionate
+            </p>
+            <div className="h-20 lg:h-32 relative flex justify-center lg:justify-end w-full">
               <AnimatePresence mode="wait">
                 <motion.h2
                   key={currentRoleIndex}
@@ -59,67 +74,50 @@ const Hero = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.5 }}
-                  className="text-xl sm:text-2xl lg:text-3xl font-semibold text-slate-300"
+                  className="text-3xl sm:text-4xl lg:text-[3rem] font-extrabold text-white tracking-tight leading-tight absolute lg:right-0"
                 >
                   {roles[currentRoleIndex]}
                 </motion.h2>
               </AnimatePresence>
-            </div>
-
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-slate-400 text-lg max-w-xl leading-relaxed"
-            >
-              {resumeData.personal.summary.split('.')[0]}. I transform innovative ideas into robust healthcare solutions and intelligent systems.
-            </motion.p>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-4"
-            >
-              <a href="#projects" className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-primary to-blue-600 text-white font-medium hover:shadow-[0_0_25px_rgba(14,165,233,0.5)] transition-all flex items-center gap-2 group">
-                View Projects
-                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-              </a>
-              <a href="/resume.pdf" target="_blank" className="px-8 py-3.5 rounded-xl glass-card text-white font-medium flex items-center gap-2 hover:bg-slate-800/50 hover:border-primary/50 transition-all">
-                <Download size={18} /> Download Resume
-              </a>
-            </motion.div>
-          </div>
-
-          {/* Right Column - Image */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="relative lg:ml-auto flex justify-center lg:justify-end mt-12 lg:mt-0"
-          >
-            <div className="relative w-72 sm:w-80 lg:w-[450px]">
-              <img 
-                src={heroImg} 
-                alt="Thakur Vaibhav Singh" 
-                className="w-full h-auto drop-shadow-[0_20px_50px_rgba(14,165,233,0.2)] hover:scale-105 transition-transform duration-700 z-10 relative"
-              />
             </div>
           </motion.div>
 
         </div>
       </div>
 
+      {/* Social Icons (Left absolute) */}
       <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 1 }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce z-20"
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 1, duration: 0.8 }}
+        className="hidden lg:flex absolute left-12 top-1/2 -translate-y-1/2 flex-col gap-8 z-20"
       >
-        <a href="#about" className="text-slate-400 hover:text-white transition-colors">
-          <ChevronDown size={32} />
+        <a href={resumeData.personal.linkedin} target="_blank" rel="noreferrer" className="text-slate-400 hover:text-purple-400 transition-colors hover:scale-110 transform">
+          <Linkedin size={22} />
+        </a>
+        <a href="https://github.com" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-purple-400 transition-colors hover:scale-110 transform">
+          <Github size={22} />
+        </a>
+        <a href={`mailto:${resumeData.personal.email}`} className="text-slate-400 hover:text-purple-400 transition-colors hover:scale-110 transform">
+          <Mail size={22} />
         </a>
       </motion.div>
+
+      {/* Resume Link (Right absolute bottom) */}
+      <motion.div 
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 1, duration: 0.8 }}
+        className="absolute right-12 bottom-12 z-20 hidden lg:block"
+      >
+        <a href="/resume.pdf" target="_blank" rel="noreferrer" className="group flex items-center gap-4 text-slate-400 hover:text-white transition-all uppercase tracking-[0.2em] text-xs font-bold">
+          RESUME 
+          <span className="p-3 border border-slate-800 group-hover:border-purple-500 rounded transition-colors bg-[#0a0a0a]">
+            <FileText size={16} className="text-slate-500 group-hover:text-purple-400 transition-colors" />
+          </span>
+        </a>
+      </motion.div>
+
     </section>
   );
 };
