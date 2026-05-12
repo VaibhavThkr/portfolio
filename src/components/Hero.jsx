@@ -95,7 +95,7 @@ const Hero = () => {
         <a href={resumeData.personal.linkedin} target="_blank" rel="noreferrer" className="text-slate-400 hover:text-purple-400 transition-colors hover:scale-110 transform">
           <FaLinkedin size={22} />
         </a>
-        <a href="/resume.pdf" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-purple-400 transition-colors hover:scale-110 transform">
+        <a href={`${import.meta.env.BASE_URL}resume.pdf`} target="_blank" rel="noreferrer" className="text-slate-400 hover:text-purple-400 transition-colors hover:scale-110 transform">
           <FileText size={22} />
         </a>
         <a href={`mailto:${resumeData.personal.email}`} className="text-slate-400 hover:text-purple-400 transition-colors hover:scale-110 transform">
@@ -110,7 +110,7 @@ const Hero = () => {
         transition={{ delay: 1, duration: 0.8 }}
         className="absolute right-12 bottom-12 z-20 hidden lg:block"
       >
-        <a href="/resume.pdf" target="_blank" rel="noreferrer" className="group flex items-center gap-4 text-slate-400 hover:text-white transition-all uppercase tracking-[0.2em] text-xs font-bold">
+        <a href={`${import.meta.env.BASE_URL}resume.pdf`} target="_blank" rel="noreferrer" className="group flex items-center gap-4 text-slate-400 hover:text-white transition-all uppercase tracking-[0.2em] text-xs font-bold">
           RESUME 
           <span className="p-3 border border-slate-800 group-hover:border-purple-500 rounded transition-colors bg-[#0a0a0a]">
             <FileText size={16} className="text-slate-500 group-hover:text-purple-400 transition-colors" />
