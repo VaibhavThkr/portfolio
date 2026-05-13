@@ -1,15 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { resumeData } from '../data/resumeData';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
+import { FaLinkedin } from 'react-icons/fa';
 
 const Contact = () => {
   return (
     <section id="contact" className="py-20 relative">
       <div className="absolute inset-0 bg-primary/5 mix-blend-overlay"></div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -22,75 +23,73 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Contact Info */}
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="space-y-8"
-          >
-            <div className="glass-card p-6 rounded-2xl flex items-center gap-6">
-              <div className="w-14 h-14 bg-slate-800 rounded-full flex items-center justify-center border border-slate-700">
-                <Mail className="text-primary" size={24} />
-              </div>
-              <div>
-                <h4 className="text-slate-400 text-sm mb-1">Email</h4>
-                <a href={`mailto:${resumeData.personal.email}`} className="text-lg text-white font-medium hover:text-primary transition-colors">
-                  {resumeData.personal.email}
-                </a>
-              </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="max-w-2xl mx-auto space-y-6"
+        >
+          <div className="glass-card p-6 rounded-2xl flex items-center gap-6">
+            <div className="w-14 h-14 bg-slate-800 rounded-full flex items-center justify-center border border-slate-700 shrink-0">
+              <Mail className="text-primary" size={24} />
             </div>
-
-            <div className="glass-card p-6 rounded-2xl flex items-center gap-6">
-              <div className="w-14 h-14 bg-slate-800 rounded-full flex items-center justify-center border border-slate-700">
-                <Phone className="text-secondary" size={24} />
-              </div>
-              <div>
-                <h4 className="text-slate-400 text-sm mb-1">Phone</h4>
-                <a href={`tel:${resumeData.personal.phone}`} className="text-lg text-white font-medium hover:text-secondary transition-colors">
-                  {resumeData.personal.phone}
-                </a>
-              </div>
+            <div>
+              <h4 className="text-slate-400 text-sm mb-1">Email</h4>
+              <a
+                href={`mailto:${resumeData.personal.email}`}
+                className="text-lg text-white font-medium hover:text-primary transition-colors break-all"
+              >
+                {resumeData.personal.email}
+              </a>
             </div>
+          </div>
 
-            <div className="glass-card p-6 rounded-2xl flex items-center gap-6">
-              <div className="w-14 h-14 bg-slate-800 rounded-full flex items-center justify-center border border-slate-700">
-                <MapPin className="text-purple-400" size={24} />
-              </div>
-              <div>
-                <h4 className="text-slate-400 text-sm mb-1">Location</h4>
-                <p className="text-lg text-white font-medium">Hyderabad, Telangana</p>
-              </div>
+          <div className="glass-card p-6 rounded-2xl flex items-center gap-6">
+            <div className="w-14 h-14 bg-slate-800 rounded-full flex items-center justify-center border border-slate-700 shrink-0">
+              <Phone className="text-secondary" size={24} />
             </div>
-          </motion.div>
+            <div>
+              <h4 className="text-slate-400 text-sm mb-1">Phone</h4>
+              <a
+                href={`tel:${resumeData.personal.phone.replace(/\s/g, '')}`}
+                className="text-lg text-white font-medium hover:text-secondary transition-colors"
+              >
+                {resumeData.personal.phone}
+              </a>
+            </div>
+          </div>
 
-          {/* Contact Form Placeholder */}
-          <motion.div 
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="glass-card p-8 rounded-2xl"
-          >
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+          <div className="glass-card p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center gap-6">
+            <div className="w-14 h-14 bg-slate-800 rounded-full flex items-center justify-center border border-slate-700 shrink-0">
+              <FaLinkedin className="text-[#0A66C2]" size={24} />
+            </div>
+            <div className="flex-1 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">Name</label>
-                <input type="text" id="name" className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="John Doe" />
+                <h4 className="text-slate-400 text-sm mb-1">LinkedIn</h4>
+                <p className="text-white font-medium">Connect on LinkedIn</p>
               </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">Email</label>
-                <input type="email" id="email" className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="john@example.com" />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-2">Message</label>
-                <textarea id="message" rows="4" className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors resize-none" placeholder="How can I help you?"></textarea>
-              </div>
-              <button className="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 rounded-lg flex items-center justify-center gap-2 transition-colors shadow-lg shadow-primary/20">
-                <Send size={18} /> Send Message
-              </button>
-            </form>
-          </motion.div>
-        </div>
+              <a
+                href={resumeData.personal.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-[#0A66C2] hover:bg-[#004182] text-white font-medium transition-colors shadow-lg shadow-[#0A66C2]/20 shrink-0"
+              >
+                <FaLinkedin size={20} />
+                View profile
+              </a>
+            </div>
+          </div>
+
+          <div className="glass-card p-6 rounded-2xl flex items-center gap-6">
+            <div className="w-14 h-14 bg-slate-800 rounded-full flex items-center justify-center border border-slate-700 shrink-0">
+              <MapPin className="text-purple-400" size={24} />
+            </div>
+            <div>
+              <h4 className="text-slate-400 text-sm mb-1">Location</h4>
+              <p className="text-lg text-white font-medium">Hyderabad, Telangana</p>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
