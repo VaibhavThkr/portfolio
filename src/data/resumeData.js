@@ -10,7 +10,7 @@ export const resumeData = {
       "Research Enthusiast",
       "Embedded Systems Developer"
     ],
-    summary: "Biomedical Engineering student with a strong focus on AI/ML in Healthcare, Computer Vision, and Embedded Systems. Passionate about developing innovative rehabilitation systems, wearable medical devices, and leveraging deep learning for personalized healthcare solutions."
+    summary: "Biomedical Engineering student with a strong focus on AI/ML in Healthcare, Computer Vision, Biomechanics, and Embedded Systems. Passionate about developing innovative rehabilitation systems, wearable medical devices, and leveraging deep learning for personalized healthcare solutions."
   },
   education: [
     {
@@ -31,7 +31,7 @@ export const resumeData = {
     "Software & Simulation": ["MATLAB", "Python", "C", "SolidWorks (CAD)", "Proteus", "ImageJ", "Arduino IDE", "Keil mvision", "OpenSim", "Canva", "Mimics"],
     "Electronics & Embedded": ["ESP32", "Arduino Uno", "IoT", "Embedded Systems", "Biomedical Sensors", "Soldering", "Circuit Design", "Wearable devices"],
     "Biomaterials & Lab Skills": ["Nanofiber Fabrication", "Biotribology", "Biomaterials Characterization", "3D Printing"],
-    "Core Competencies": ["Biomedical Signal Processing", "Biomedical Equipment Management", "Medical Image processing"],
+    "Core Competencies": ["Biomedical Signal Processing", "Biomedical Equipment Management", "Medical Image processing", "Biomechanics"],
     "Soft Skills": ["Communication", "Problem solving", "Presentation", "Team work", "Analytic", "Documentation"]
   },
   projects: [
