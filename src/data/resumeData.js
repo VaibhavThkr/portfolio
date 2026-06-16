@@ -92,7 +92,7 @@ export const resumeData = {
       tags: ["Biomaterials", "Nanofabrication"]
     }
   ],
-  experience: [
+  activities: [
     {
       role: "Organizer",
       organization: "IEEE SB OUCE EMBS",
@@ -140,6 +140,17 @@ export const resumeData = {
       organization: "Meditech 2k24",
       period: "Jan 2024 - Mar 2024",
       details: ["Volunteered for design for various posters, invitations, Brochure, Certificates."]
+    }
+  ],
+  experience: [
+    {
+      role: "Deep Learning Intern",
+      organization: "CMR Hospital",
+      period: "Oct 2024 – Present",
+      details: [
+        "Developing and optimizing deep learning models for medical image analysis.",
+        "Collaborating with healthcare professionals to deploy AI-driven diagnostic tools to improve accuracy."
+      ]
     }
   ],
   achievements: [
