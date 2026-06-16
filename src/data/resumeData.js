@@ -144,12 +144,12 @@ export const resumeData = {
   ],
   experience: [
     {
-      role: "Deep Learning Intern",
-      organization: "CMR Hospital",
-      period: "Oct 2024 – Present",
+      role: "Intern",
+      organization: "Biomedical Sensors and Systems Lab, University of Memphis, USA",
+      period: "May 2026 – Present",
       details: [
-        "Developing and optimizing deep learning models for medical image analysis.",
-        "Collaborating with healthcare professionals to deploy AI-driven diagnostic tools to improve accuracy."
+        "Working on Research projects involving Biomechanics of Elbow joint, Knee joint, Shoulder joint.",
+        "Utilizing softwares like OpenSim, Mimics, and Python programming."
       ]
     }
   ],
