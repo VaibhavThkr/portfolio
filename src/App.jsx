@@ -7,15 +7,19 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Research from './components/Research';
 import Experience from './components/Experience';
+import Gallery from './components/Gallery';
 import Activities from './components/Activities';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-dark text-slate-200 font-sans selection:bg-primary/30 selection:text-white">
-      {/* Global Background Elements */}
-      <div className="fixed inset-0 z-[-1] bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-slate-900 via-[#0f172a] to-black"></div>
+    <div className="min-h-screen bg-[#050505] text-slate-200 font-sans selection:bg-purple-600/40 selection:text-white">
+      {/* Global Ambient Background Lighting */}
+      <div className="fixed inset-0 z-[-1] bg-[#050505]">
+        <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-purple-900/10 rounded-full blur-[160px] pointer-events-none"></div>
+        <div className="absolute bottom-1/3 left-10 w-[500px] h-[500px] bg-indigo-950/10 rounded-full blur-[140px] pointer-events-none"></div>
+      </div>
       
       <Navbar />
       
@@ -27,6 +31,7 @@ function App() {
         <Projects />
         <Research />
         <Experience />
+        <Gallery />
         <Activities />
         <Contact />
       </main>
