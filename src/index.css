@@ -23,6 +23,11 @@
   100% { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -54,6 +59,21 @@ body {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+  }
+  .animate-marquee {
+    display: flex;
+    width: max-content;
+    animation: marquee 35s linear infinite;
+  }
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
 

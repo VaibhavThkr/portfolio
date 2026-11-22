@@ -105,9 +105,15 @@ const Research = () => {
                       <span className="text-xs text-slate-400 font-medium">{pub.date}</span>
                     </div>
 
-                    <h4 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors leading-snug">
+                    <a 
+                      href={pub.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-xl font-bold text-white mb-3 hover:text-purple-300 transition-colors leading-snug group/link"
+                    >
                       "{pub.title}"
-                    </h4>
+                      <ExternalLink size={16} className="inline-block ml-2 opacity-60 group-hover/link:opacity-100 transition-opacity" />
+                    </a>
 
                     <p className="text-sm font-medium text-purple-200/90 mb-4 bg-slate-900/60 p-2.5 rounded-lg border border-slate-800">
                       📖 {pub.journal}
@@ -119,13 +125,25 @@ const Research = () => {
                   </div>
 
                   <div>
-                    <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-800/80">
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2 pt-4 mb-5 border-t border-slate-800/80">
                       {pub.tags.map(tag => (
                         <span key={tag} className="text-xs px-2.5 py-1 bg-purple-950/40 text-purple-300 rounded-md border border-purple-500/20">
                           {tag}
                         </span>
                       ))}
                     </div>
+
+                    {/* Paper Link Button */}
+                    <a
+                      href={pub.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2.5 w-full py-3 px-4 rounded-xl bg-purple-600/25 hover:bg-purple-600 text-purple-200 hover:text-white font-semibold text-sm border border-purple-500/40 hover:border-purple-400 transition-all shadow-[0_0_20px_rgba(168,85,247,0.2)] group/btn"
+                    >
+                      <span>Read Paper on {pub.publisher} Link</span>
+                      <ExternalLink size={15} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                    </a>
                   </div>
                 </motion.div>
               ))}
