@@ -87,11 +87,11 @@ const galleryPhotos = [
   {
     id: 7,
     image: tedxPresImg,
-    title: "TEDxOsmaniaU Speaker Momento Presentation",
+    title: "TEDxOsmaniaU Speaker Memento Presentation",
     category: "Leadership",
-    tag: "Official LOR Recipient",
+    tag: "TEDx Organizing Committee",
     date: "2025",
-    description: "Thakur Vaibhav Singh presenting the handcrafted portrait memento to the distinguished guest speaker on stage at TEDxOsmaniaU, recognized with an official Letter of Recommendation.",
+    description: "Presenting the memento to the guest speaker on stage during TEDxOsmaniaU 2025 as part of the organizing committee.",
     icon: Users,
     accent: "text-amber-400",
     border: "border-amber-500/30"
